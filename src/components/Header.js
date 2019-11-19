@@ -1,6 +1,5 @@
 import React from 'react';
-import {Container, Row, Col, Image, Nav, Navbar, Form, NavDropdown, FormControl, Button} from 'react-bootstrap'
-import { Link } from "react-router-dom";
+import {Image, Nav, Navbar, Form, NavDropdown, FormControl, Button} from 'react-bootstrap'
 import freakylogo from '../images/freakylogo.png'
 
 function Header () {
