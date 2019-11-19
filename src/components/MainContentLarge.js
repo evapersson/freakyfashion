@@ -12,7 +12,7 @@ function MainContentLarge () {
   ];
 
   return(
-    <CardDeck className="mt-3">{mainContentLargeList.map(item => {
+    <CardDeck className="mt-3 mb-4">{mainContentLargeList.map(item => {
       return (<Card className="col-6"><Card.Img variant="top" src={item.image} alt={item.name} />
         ,
         <Card.Body>
