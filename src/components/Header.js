@@ -1,10 +1,12 @@
 import React from 'react';
+import {Container, Row, Col } from 'react-bootstrap'
 
 function Header () {
   return(
-    <div>
-
-    </div>
+    <Container>
+    
+    </Container>
+  
   );
 }
 export default Header;
