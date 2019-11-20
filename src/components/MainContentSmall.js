@@ -7,18 +7,20 @@ import metallicdress from '../images/metallicdress-small.jpg'
 function MainContentSmall () {
 
   const mainContentList = [
-    { name: "Freaky dress", image:{freakydress}, price: 499, shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " },
+    {id: 1, name: "Freaky dress", image: freakydress, price: 499, shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " },
+    
 
-    { name: "Leo dress", image:{leodress}, price: 699, shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "  },
+    {id: 2, name: "Leo dress", image: leodress, price: 699, shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "  },
 
-    { name: "Metallic dress", image: {metallicdress}, price: 1099, shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "  }
+    {id: 3, name: "Metallic dress", image: metallicdress, price: 1099, shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "  }
   ];
-
+console.log("freakydress", {freakydress})
 
   return(
     <CardDeck className="mt-3">{mainContentList.map(item => {
-      return (<Card className="col-4"><Card.Img variant="top" src={item.image} alt={item.name}/>
-        ,
+      return (<Card key={item.id} className="col-4">
+        <Card.Img variant="top" src={item.image} alt={item.name}/>
+        
         <Card.Body>
           <Card.Title>{item.name}</Card.Title>
           <Card.Text>
