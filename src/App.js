@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header.js'
+import Header from './components/Header'
 import Hero from './components/Hero.js'
 import Content from './components/Content'
-import Footer from './components/Footer';
+import IconBarFooter from './components/IconBarFooter'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <Header/>
         <Hero/>
         <Content/>
-        <Footer/>
+      <IconBarFooter/>
+      <Footer/>
     </div>
   );
 }

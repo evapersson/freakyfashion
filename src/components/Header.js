@@ -1,27 +1,55 @@
 import React from 'react';
-import {Image, Nav, Navbar, Form, NavDropdown, FormControl, Button} from 'react-bootstrap'
+import {Image, Form, FormControl, Navbar, Nav, NavDropdown, Dropdown, Container, Row, Col} from 'react-bootstrap'
 import freakylogo from '../images/freakylogo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faHeart} from '@fortawesome/free-regular-svg-icons';
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 
+
 function Header () {
   return (
+    <Container fluid bg="light" style={{ backgroundColor: "#F8F9FA"}}>
+      <Row>
+        <Image className="mt-3" src={freakylogo} alt="freaky-logo" href="#home"></Image>
+          <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          </Form>
+        <FontAwesomeIcon icon={faEye} className="ml-5 mt-5" />
+        <FontAwesomeIcon icon={faHeart} className="ml-5 mt-5" />
+        <FontAwesomeIcon icon={faShoppingCart} className="ml-5 mt-5 mr-5" />
+
+        <Dropdown className="ml-5 mt-4">
+          <Dropdown.Toggle variant="light" id="dropdown-basic">
+            Svenska
+        </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">Engelska</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+      </Row>
     <Navbar bg="light" expand="lg" sticky="top">
-      <Image src={freakylogo} alt="freaky-logo" href="#home"></Image>
-      <Form inline>
-        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-        <Button variant="outline-success">Search</Button>
-      </Form>
-      <FontAwesomeIcon icon={faEye} className="ml-5"/>
-      <FontAwesomeIcon icon={faHeart} className="ml-5"/>
-      <FontAwesomeIcon icon={faShoppingCart} className="ml-5"/>
-      <br></br>
+      {/* <Image src={freakylogo} alt="freaky-logo" href="#home"></Image>
+        <Form inline>
+          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+        </Form> */}
+      {/* <Dropdown className="ml-5">
+        <Dropdown.Toggle variant="light" id="dropdown-basic">
+          Svenska
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item href="#/action-1">Engelska</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown> */}
+
+
+      {/* <FontAwesomeIcon icon={faEye} className="ml-5" />
+      <FontAwesomeIcon icon={faHeart} className="ml-5" />
+      <FontAwesomeIcon icon={faShoppingCart} className="ml-5 mr-5" /> */}
+
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="#home">Nyheter</Nav.Link>
-
           <NavDropdown title="Kategorier" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Klänningar</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">Skor</NavDropdown.Item>
@@ -35,6 +63,7 @@ function Header () {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
+    </Container>
   );
 }
 export default Header;
