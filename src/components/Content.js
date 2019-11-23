@@ -2,11 +2,11 @@ import React from 'react'
 import MainContentSmall from './MainContentSmall'
 import MainContentLarge from './MainContentLarge'
 import { Container } from 'react-bootstrap';
-import eggdress from '../images/eggdress.jpg'
-import featherdress from '../images/featherdress.jpg'
-import freakydress from '../images/freakydress-small.jpg'
-import leodress from '../images/leodress-small.jpg'
-import metallicdress from '../images/metallicdress-small.jpg'
+import eggdress from '../Images/eggdress.jpg'
+import featherdress from '../Images/featherdress.jpg'
+import freakydress from '../Images/freakydress-small.jpg'
+import leodress from '../Images/leodress-small.jpg'
+import metallicdress from '../Images/metallicdress-small.jpg'
 
 function Content (){
 

@@ -1,7 +1,26 @@
 import React from 'react'
 import {Container, Row, Dropdown} from 'react-bootstrap'
 
+
 function CountrySelector (){
+  // {
+  //   props.mainContentLargeList.map(item => {
+  //     return (<Card key={item.id} className="col-6"><Card.Img variant="top" src={item.image} alt={item.name} style={{ maxWidth: "100%" }} />
+  //       <Card.Body>
+  //         {/* <Card.Title>{item.name}</Card.Title>
+  //         <Card.Text>
+  //           {item.shortDescription}
+  //         </Card.Text>
+  //         <h3>{item.price} kr</h3> */}
+  //       </Card.Body>
+  //     </Card>);
+  //   })
+  // }
+const countryList = [
+  {id: 1, title: "Land", value1: "Sverige", value2: "England"},
+  {id: 2, title: "Språk", value1: "Svenska", value2: "English"}
+]
+
   return (
 <Container>
      <Row>
@@ -12,7 +31,6 @@ function CountrySelector (){
    </Row>
    <Row>    
       <Dropdown>
-
         <Dropdown.Toggle variant="light" id="dropdown-basic">
           Sverige
         </Dropdown.Toggle>

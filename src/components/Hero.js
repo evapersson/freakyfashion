@@ -1,5 +1,5 @@
 import React from 'react'
-import hero from '../images/hero.jpg';
+import hero from '../Images/hero.jpg';
 import {Container, Row, Col, Image, Button, Card} from 'react-bootstrap'
 
 function Hero (){
