@@ -4,7 +4,8 @@ import {Container, Row, Col, Image, Button, Card} from 'react-bootstrap'
 
 function Hero (){
   return (
-    <Container className="mt-3 d-xs-none" style={{ backgroundColor: '#E193A5' }}>
+    // <Container className="mt-3 d-xs-none" style={{ backgroundColor: '#E193A5' }}>
+    <Container className="mt-3 d-xs-none">
         <Row>
           <Col className="col-4 mt-sm-5">
              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>

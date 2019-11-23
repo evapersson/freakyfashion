@@ -6,7 +6,7 @@ import Header from './Components/Header'
 // import Hero from './Components/Hero.js'
 // import Content from './Components/Content'
 // import IconBarFooter from './Components/IconBarFooter'
-import DetailsPage from './Pages/DetailsPage'
+import DetailPage from './Pages/DetailPage'
 import Footer from './Components/Footer'
 import StartPage from './Pages/StartPage'
 
@@ -32,7 +32,7 @@ function App() {
         <Header siteLink={siteLink} />
         <Switch>
           <Route exact path="/" component={StartPage} />
-          <Route path="/detailsPage" component={DetailsPage} />
+          <Route path="/detailPage" component={DetailPage} />
         </Switch>
         <Footer />
       </BrowserRouter>
