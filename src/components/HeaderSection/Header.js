@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, Form, FormControl, Navbar, Nav, NavDropdown, Dropdown, Container, Row, Col} from 'react-bootstrap'
-import freakylogo from '../Images/freakylogo.png'
+import freakylogo from '../../Images/freakylogo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faHeart} from '@fortawesome/free-regular-svg-icons';
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons';

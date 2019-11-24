@@ -1,14 +1,14 @@
 import React from 'react'
 import Hero from '../Components/Hero'
-import Content from '../Components/Content'
-import IconBarFooter from '../Components/IconBarFooter'
+import ContentContainer from '../Components/MainContentSection/ContentContainer'
+import IconBarFooter from '../Components/FooterSection/IconBarFooter'
 
 
 const StartPage = () => {
   return(
   <>
     <Hero />
-    <Content />
+    <ContentContainer />
     <IconBarFooter />
      </>
   );

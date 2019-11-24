@@ -2,7 +2,7 @@ import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright} from '@fortawesome/free-regular-svg-icons'
-import CountrySelector from './CountrySelector'
+import CountrySelector from '../FooterSection/CountrySelector'
 
 function Footer () {
 

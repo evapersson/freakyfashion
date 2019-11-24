@@ -1,20 +1,32 @@
 import React from 'react'
-import { Container, Col, Row, Image } from 'react-bootstrap';
+import { Container, Col, Row, Image, Card} from 'react-bootstrap';
+import ProductDetail from '../Components/ProductDetailSection/ProductDetail'
 
 
 const DetailPage = () =>{
   return(
-    <Container fluid>
+    <Container>
+     <ProductDetail/>
       <Row>
-      <Col className= "col-6">
-          <Image src="https://via.placeholder.com/350x450" alt="image on a product"></Image>
-      </Col>
-      <Col className="col-6">
-
-      </Col>
+        <h4>Rekommenderat för dig</h4>
       </Row>
-      <Row>
-        <h4>Rekomenderat för dig</h4>
+      <Row className="mb-2">
+        <Card className="m-2">
+          <Card.Img variant="top" src="https://via.placeholder.com/250x350" />
+        </Card>
+
+        <Card className="m-2">
+          <Card.Img variant="top" src="https://via.placeholder.com/250x350" /> 
+        </Card>
+          
+        <Card className="m-2">
+          <Card.Img variant="top" src="https://via.placeholder.com/250x350" />
+        </Card>
+
+        <Card className="m-2">
+          <Card.Img variant="top" src="https://via.placeholder.com/250x350" />
+        </Card>
+   
       </Row>
     </Container>
   );

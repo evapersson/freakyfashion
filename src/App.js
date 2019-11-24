@@ -2,12 +2,12 @@ import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Components/Header'
+import Header from './Components/HeaderSection/Header'
 // import Hero from './Components/Hero.js'
 // import Content from './Components/Content'
 // import IconBarFooter from './Components/IconBarFooter'
 import DetailPage from './Pages/DetailPage'
-import Footer from './Components/Footer'
+import Footer from './Components/FooterSection/Footer'
 import StartPage from './Pages/StartPage'
 
 function App() {

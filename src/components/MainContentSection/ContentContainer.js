@@ -2,13 +2,13 @@ import React from 'react'
 import MainContentSmall from './MainContentSmall'
 import MainContentLarge from './MainContentLarge'
 import { Container } from 'react-bootstrap';
-import eggdress from '../Images/eggdress.jpg'
-import featherdress from '../Images/featherdress.jpg'
-import freakydress from '../Images/freakydress-small.jpg'
-import leodress from '../Images/leodress-small.jpg'
-import metallicdress from '../Images/metallicdress-small.jpg'
+import eggdress from '../../Images/eggdress.jpg'
+import featherdress from '../../Images/featherdress.jpg'
+import freakydress from '../../Images/freakydress-small.jpg'
+import leodress from '../../Images/leodress-small.jpg'
+import metallicdress from '../../Images/metallicdress-small.jpg'
 
-function Content (){
+function ContentContainer (){
 
   const mainContentList = [
     { id: 1, name: "Freaky dress", image: freakydress, price: 499, shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " },
@@ -32,4 +32,4 @@ function Content (){
     </Container>
   );
 }
-export default Content
+export default ContentContainer
