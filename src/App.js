@@ -3,11 +3,8 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/HeaderSection/Header'
-// import Hero from './Components/Hero.js'
-// import Content from './Components/Content'
-// import IconBarFooter from './Components/IconBarFooter'
 import DetailPage from './Pages/DetailPage'
-import Footer from './Components/FooterSection/Footer'
+import FooterContainer from './Components/FooterSection/FooterContainer'
 import StartPage from './Pages/StartPage'
 
 function App() {
@@ -24,8 +21,6 @@ function App() {
     { id: 10, title: "Instagram", link: "#" },
   ];
 
-
-
   return (
     <div className="App">
       <BrowserRouter>
@@ -34,7 +29,7 @@ function App() {
           <Route exact path="/" component={StartPage} />
           <Route path="/detailPage" component={DetailPage} />
         </Switch>
-        <Footer />
+        <FooterContainer />
       </BrowserRouter>
     </div>
   );

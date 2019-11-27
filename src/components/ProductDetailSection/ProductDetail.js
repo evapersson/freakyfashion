@@ -1,32 +1,34 @@
 import React from 'react'
-import {Row, Col, Card, Image} from 'react-bootstrap'
+import {Row, Col, Image} from 'react-bootstrap'
+import SizePicker from '../ProductDetailSection/SizePicker'
+import ColorPicker from '../ProductDetailSection/ColorPicker'
 
 const ProductDetail = () => {
-  return(
-    <Row>
-      <Col className="col-md-6">
 
-        <Image src="https://via.placeholder.com/350x450" alt="image on a product"></Image>
-
+  return (
+    <Row className="left-align">
+      <Col xs={12} md={6}>
+        <Image
+          src="https://via.placeholder.com/450x600"
+          alt="image on a product"
+        ></Image>
       </Col>
-      <Col className="col-md-6">
-        <Card>
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
-    </Card.Text>
-            <Card.Link href="#">Card Link</Card.Link>
-            <Card.Link href="#">Another Link</Card.Link>
-          </Card.Body>
-        </Card>
+      <Col xs={12} md={6}>
+        <h3>Produktnamn</h3>
+        <p>Artikelnummer</p>
+        <article>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. "
+          <h5>Pris:</h5>
+        </article>
+
+        <ColorPicker />
+        <SizePicker />
       </Col>
     </Row>
-  
-  
-    );
+  );
 }
 
 export default ProductDetail

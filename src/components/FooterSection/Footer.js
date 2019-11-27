@@ -15,47 +15,117 @@ function Footer () {
     {
       id: 3, category: "Kundtjänst", items: [{ name: "Returpolicy" }, { name: "Integritetspolicy" }]
     }
-  ]
+  ];
+
+  const countryList = [
+    { id: 1, title: 'Land', value1: 'Sverige', value2: 'England' },
+    { id: 2, title: 'Språk', value1: 'Svenska', value2: 'English' },
+  ];
 
 
   return (
-    <Container fluid style={{ backgroundColor: '#9C7586' }} className="pb-3 pt-2">
+    <Container
+      fluid
+      // style={{ backgroundColor: '#9C7586' }}
+      style={{borderTopColor: 'black'}}
+      className="pb-3 pt-3"
+    >
       <Row>
-        <Col className="col-6">
+        <Col xs={12} md={6}>
           <Row>
-            <Col className="col 4 text-left"><h6>Shopping</h6></Col>
-            <Col className="col 4 text-left"><h6>Mina Sidor</h6></Col>
-            <Col className="col 4 text-left"><h6>Kundtjänst</h6></Col>
+            <Col xs={12} md={4}>
+              <h6 className="text-left">Shopping</h6>
+              <p className="text-left">
+                <a
+                  href="#"
+                  style={{ color: 'black' }}
+                  className="text-decoration-none"
+                >
+                  Vinterjackor
+                </a>
+              </p>
+              <p className="text-left">
+                <a
+                  href="#"
+                  style={{ color: 'black' }}
+                  className="text-decoration-none"
+                >
+                  Pufferjackor
+                </a>
+              </p>
+              <p className="text-left">
+                <a
+                  href="#"
+                  style={{ color: 'black' }}
+                  className="text-decoration-none"
+                >
+                  Kappa
+                </a>
+              </p>
+              <p className="text-left">
+                <a
+                  href="#"
+                  style={{ color: 'black' }}
+                  className="text-decoration-none"
+                >
+                  Trenchcoats
+                </a>
+              </p>
+            </Col>
+            <Col xs={12} md={4}>
+              <h6 className="text-left">Mina Sidor</h6>
+              <p className="text-left">
+                <a
+                  href="#"
+                  style={{ color: 'black' }}
+                  className="text-decoration-none"
+                >
+                  Mina ordrar
+                </a>
+              </p>
+              <p className="text-left">
+                <a
+                  href="#"
+                  style={{ color: 'black' }}
+                  className="text-decoration-none"
+                >
+                  Mitt konto
+                </a>
+              </p>
+            </Col>
+            <Col xs={12} md={4}>
+              <h6 className="text-left">Kundtjänst</h6>
+              <p className="text-left">
+                <a
+                  href="#"
+                  style={{ color: 'black' }}
+                  className="text-decoration-none"
+                >
+                  Returpolicy
+                </a>
+              </p>
+              <p className="text-left">
+                <a
+                  href="#"
+                  style={{ color: 'black' }}
+                  className="text-decoration-none"
+                >
+                  Integritetspolicy
+                </a>
+              </p>
+            </Col>
           </Row>
-          <Row>
-            <Col className="col 4">
-              <p className="text-left"><a href="#" style={{ color: "black" }} className="text-decoration-none">Vinterjackor</a></p>
-              <p className="text-left"> <a href="#" style={{ color: "black" }} className="text-decoration-none">Pufferjackor</a></p>
-              <p className="text-left"><a href="#" style={{ color: "black" }} className="text-decoration-none">Kappa</a> </p>
-              <p className="text-left"><a href="#" style={{ color: "black" }} className="text-decoration-none">Trenchcoats</a></p>
-            </Col>
-            <Col className="col 4">
-              <p className="text-left"><a href="#" style={{ color: "black" }} className="text-decoration-none">Mina ordrar</a></p>
-              <p className="text-left"><a href="#" style={{ color: "black" }} className="text-decoration-none">Mitt konto</a></p>
-
-            </Col>
-            <Col className="col 4">
-              <p className="text-left"><a href="#" style={{ color: "black" }} className="text-decoration-none">Returpolicy</a></p>
-              <p className="text-left"><a href="#" style={{ color: "black" }} className="text-decoration-none">Integritetspolicy</a></p>
-            </Col>
-          </Row>
-           
         </Col>
-        <Col className="col-3"></Col>
-        <Col className="col-3">
-          <CountrySelector/>
+          <Col xs={12} md={3}></Col>
+          <Col xs={12} md={3}>
+          <CountrySelector countryList={countryList}/>
         </Col>
       </Row>
       <Row>
-      <Col className="col-12">
-        <FontAwesomeIcon icon={faCopyright} className="mr-2" />
-        <small>Copyright Freaky Fashion 2019</small>
-      </Col>
+        <Col className="col-12">
+          <FontAwesomeIcon icon={faCopyright} className="mr-2" />
+          <small>Copyright Freaky Fashion 2019</small>
+        </Col>
       </Row>
     </Container>
   );

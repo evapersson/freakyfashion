@@ -1,0 +1,1 @@
+//place all data that the app will use
