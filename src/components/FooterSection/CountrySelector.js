@@ -6,7 +6,7 @@ function CountrySelector ({countryList}){
 
   return (
     <Container>
-      <h6>Välj land och språk</h6>
+      <h6 className="text-left">Välj land och språk</h6>
       {countryList.map(item =>{
         return(
           <Row key={item.id}>
