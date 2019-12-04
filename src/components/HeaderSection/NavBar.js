@@ -4,16 +4,16 @@ import {Navbar, Nav} from 'react-bootstrap';
 const NavBar = () => {
 
   const siteLink = [
-    { id: 1, title: "Nyheter", link: "#" },
-    { id: 2, title: "Kategorier", link: "#" },
-    { id: 3, title: "Klänningar", link: "#" },
-    { id: 4, title: "Skor", link: "#" },
-    { id: 5, title: "Accesoarer", link: "#" },
-    { id: 6, title: "Rea", link: "#" },
-    { id: 7, title: "Kampanjer", link: "#" },
-    { id: 8, title: "Varumärken", link: "#" },
-    { id: 9, title: "Shop", link: "#" },
-    { id: 10, title: "Instagram", link: "#" },
+    { id: 1, title: "Nyheter", link: "news" },
+    { id: 2, title: "Kategorier", link: "categories" },
+    { id: 3, title: "Klänningar", link: "dresses" },
+    { id: 4, title: "Skor", link: "shoes" },
+    { id: 5, title: "Accesoarer", link: "accessories" },
+    { id: 6, title: "Rea", link: "/sales" },
+    { id: 7, title: "Kampanjer", link: "/campaigns" },
+    { id: 8, title: "Varumärken", link: "/brands" },
+    { id: 9, title: "Shop", link: "/shopping" },
+    { id: 10, title: "Instagram", link: "/instagram" },
   ];
   return (
     <Navbar bg="light" expand="lg" sticky="top">

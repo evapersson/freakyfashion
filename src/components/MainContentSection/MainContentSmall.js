@@ -4,14 +4,14 @@ import {Link} from 'react-router-dom'
 import {CustomPlaceholder} from 'react-placeholder-image'
 
 
-function MainContentSmall ({mainContentList}) {
+const MainContentSmall = ({mainContentList}) => {
 
   return(
     <CardDeck className="mt-3">{mainContentList.map(item => {
       return (
         <Card key={item.id}>
           <Link
-            to="/detailPage"
+            to="/product/details"
             style={{ textDecorationLine: 'none', color: 'black' }}
           >
             <Card.Img

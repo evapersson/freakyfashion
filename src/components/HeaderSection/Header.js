@@ -1,5 +1,6 @@
 import React from 'react';
 import {Image, Form, FormControl, Navbar, Nav, NavDropdown, Dropdown, Container, Row, Col} from 'react-bootstrap'
+import {Link} from 'react-router-dom'
 import freakylogo from '../../Images/freakylogo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faHeart} from '@fortawesome/free-regular-svg-icons';
@@ -18,12 +19,14 @@ function Header ({siteLink}) {
     >
       <Row>
         <Col xs={12} md={3}>
+          <Link to="/">
           <Image
             className="mt-3"
             src={freakylogo}
             alt="freaky-logo"
-            href="#home"
+            href="/"
           ></Image>
+          </Link>
         </Col>
           <Col xs={12} md={3}>
           <Form className="mt-4">

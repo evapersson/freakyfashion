@@ -10,7 +10,7 @@ function MainContentLarge ({mainContentLargeList}) {
       return (
         <Card key={item.id}>
           <Link
-            to="/detailPage"
+            to="/product/details"
             style={{ textDecorationLine: 'none', color: 'black' }}
           >
             <Card.Img variant="top" src={item.image} alt={item.name} style={{ maxWidth: "75%"}}/>   

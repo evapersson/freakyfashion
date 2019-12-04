@@ -37,7 +37,7 @@ function Footer () {
               <h6 className="text-left">Shopping</h6>
               <p className="text-left">
                 <a
-                  href="#"
+                  href="/jackets"
                   style={{ color: 'black' }}
                   className="text-decoration-none"
                 >
@@ -46,7 +46,7 @@ function Footer () {
               </p>
               <p className="text-left">
                 <a
-                  href="#"
+                  href="jackets"
                   style={{ color: 'black' }}
                   className="text-decoration-none"
                 >
@@ -55,7 +55,7 @@ function Footer () {
               </p>
               <p className="text-left">
                 <a
-                  href="#"
+                  href="jackets"
                   style={{ color: 'black' }}
                   className="text-decoration-none"
                 >
@@ -64,7 +64,7 @@ function Footer () {
               </p>
               <p className="text-left">
                 <a
-                  href="#"
+                  href="jackets"
                   style={{ color: 'black' }}
                   className="text-decoration-none"
                 >
@@ -76,7 +76,7 @@ function Footer () {
               <h6 className="text-left">Mina Sidor</h6>
               <p className="text-left">
                 <a
-                  href="#"
+                  href="mypages"
                   style={{ color: 'black' }}
                   className="text-decoration-none"
                 >
@@ -85,7 +85,7 @@ function Footer () {
               </p>
               <p className="text-left">
                 <a
-                  href="#"
+                  href="/mypages"
                   style={{ color: 'black' }}
                   className="text-decoration-none"
                 >
@@ -97,7 +97,7 @@ function Footer () {
               <h6 className="text-left">Kundtjänst</h6>
               <p className="text-left">
                 <a
-                  href="#"
+                  href="/customerservice"
                   style={{ color: 'black' }}
                   className="text-decoration-none"
                 >
@@ -106,7 +106,7 @@ function Footer () {
               </p>
               <p className="text-left">
                 <a
-                  href="#"
+                  href="/customerservice"
                   style={{ color: 'black' }}
                   className="text-decoration-none"
                 >
