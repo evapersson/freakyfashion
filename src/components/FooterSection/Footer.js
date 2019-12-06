@@ -6,16 +6,16 @@ import CountrySelector from '../FooterSection/CountrySelector'
 
 function Footer () {
 
-  const footerInfo = [
-    {
-      id: 1, category: "Shopping", items: [{ name: "Vinterjackor"}, { name: "Pufferjackor"}, { name: "Kappa"}, {name: "Trenchcoat"}]
-    }, {
-      id: 2, category: "Mina sidor", items: [{ name: "Mina ordrar"}, { name: "Mitt konto"}]   
-    },
-    {
-      id: 3, category: "Kundtjänst", items: [{ name: "Returpolicy" }, { name: "Integritetspolicy" }]
-    }
-  ];
+  // const footerInfo = [
+  //   {
+  //     id: 1, category: "Shopping", items: [{ name: "Vinterjackor"}, { name: "Pufferjackor"}, { name: "Kappa"}, {name: "Trenchcoat"}]
+  //   }, {
+  //     id: 2, category: "Mina sidor", items: [{ name: "Mina ordrar"}, { name: "Mitt konto"}]   
+  //   },
+  //   {
+  //     id: 3, category: "Kundtjänst", items: [{ name: "Returpolicy" }, { name: "Integritetspolicy" }]
+  //   }
+  // ];
 
   const countryList = [
     { id: 1, title: 'Land', value1: 'Sverige', value2: 'England' },

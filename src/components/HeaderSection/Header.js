@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Form, FormControl, Navbar, Nav, NavDropdown, Dropdown, Container, Row, Col} from 'react-bootstrap'
+import {Image, Form, FormControl,Dropdown, Container, Row, Col} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import freakylogo from '../../Images/freakylogo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

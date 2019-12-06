@@ -2,6 +2,8 @@ import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer } from 'react-notifications';
 import Header from './Components/HeaderSection/Header'
 import DetailPage from './Pages/DetailPage'
 import FooterContainer from './Components/FooterSection/FooterContainer'
@@ -44,6 +46,7 @@ function App() {
           <Route path="/jackets" component={Jackets} />
         </Switch>
         <FooterContainer />
+        <NotificationContainer/>
       </BrowserRouter>
     </div>
   );

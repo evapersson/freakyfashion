@@ -1,7 +1,6 @@
 import React from 'react'
 import {CardDeck, Card} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
-import {CustomPlaceholder} from 'react-placeholder-image'
 
 
 const MainContentSmall = ({mainContentList}) => {
@@ -34,16 +33,3 @@ const MainContentSmall = ({mainContentList}) => {
   );
 }
 export default MainContentSmall
-
-
-       
-
-
-
-            //             <CustomPlaceholder
-            //   // width={250}
-            //   // height={150}
-            //   maxWidth= {'100%'}
-            //   textColor="#ffffff"
-            //   text="Picture"
-            // />

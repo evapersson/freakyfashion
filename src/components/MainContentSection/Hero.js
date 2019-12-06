@@ -1,6 +1,6 @@
 import React from 'react'
 import hero from '../../Images/hero.jpg';
-import {Container, Row, Col, Image, Button} from 'react-bootstrap'
+import {Row, Col, Image, Button} from 'react-bootstrap'
 // import {CustomPlaceholder} from 'react-placeholder-image'
 
 function Hero (){
