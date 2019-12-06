@@ -3,18 +3,18 @@ import MainContentSmall from './MainContentSmall'
 import MainContentLarge from './MainContentLarge'
 import Hero from './Hero'
 import { Container } from 'react-bootstrap';
-// import eggdress from '../../Images/eggdress.jpg'
-// import featherdress from '../../Images/featherdress.jpg'
-// import freakydress from '../../Images/freakydress-small.jpg'
-// import leodress from '../../Images/leodress-small.jpg'
-// import metallicdress from '../../Images/metallicdress-small.jpg'
 import nakd1 from '../../Images/nakd1.jpg'
 import nakd2 from '../../Images/nakd2.jpg'
 import nakd3 from '../../Images/nakd3.jpg'
 import nakd4 from '../../Images/nakd4.jpg';
 import nakd5 from '../../Images/nakd5.jpg';
+import hero from '../../Images/hero.jpg';
 
 function ContentContainer (){
+
+  const heroInfo = {
+    image: hero, heroText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", btnText: "CTA"
+  }
 
   const mainContentList = [
     { id: 1, name: "Freaky dress", image: nakd1, price: 499, shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " },
@@ -33,7 +33,7 @@ function ContentContainer (){
 
   return(
     <Container>
-      <Hero/>
+      <Hero heroInfo={heroInfo}/>
         <MainContentSmall mainContentList={mainContentList} />
       <MainContentLarge mainContentLargeList={mainContentLargeList } />
     </Container>

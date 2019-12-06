@@ -1,21 +1,19 @@
 import React from 'react'
 import hero from '../../Images/hero.jpg';
 import {Row, Col, Image, Button} from 'react-bootstrap'
-// import {CustomPlaceholder} from 'react-placeholder-image'
 
-function Hero (){
+
+function Hero ({heroInfo}){
   return (
     <Row className="flex-column-reverse flex-lg-row">
       <Col xs={12} md={3}>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
+        <p className="pt-5">
+         {heroInfo.heroText}
         </p>
-        <Button variant="light">CTA</Button>
+        <Button variant="light">{heroInfo.btnText}</Button>
       </Col>
       <Col xs={12} md={9}>
-        <Image src={hero} alt="news" fluid className="mt-2 mb-2">
-
+        <Image src={heroInfo.image} alt="news" fluid className="mt-2 mb-2">
         </Image>
       </Col>
     </Row>

@@ -8,7 +8,19 @@ import {faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import NavBar from './NavBar'
 
 
-function Header ({siteLink}) {
+function Header () {
+    const siteLink = [
+      { id: 1, title: 'Nyheter', link: 'news' },
+      { id: 2, title: 'Kategorier', link: 'categories' },
+      { id: 3, title: 'Klänningar', link: 'dresses' },
+      { id: 4, title: 'Skor', link: 'shoes' },
+      { id: 5, title: 'Accesoarer', link: 'accessories' },
+      { id: 6, title: 'Rea', link: '/sales' },
+      { id: 7, title: 'Kampanjer', link: '/campaigns' },
+      { id: 8, title: 'Varumärken', link: '/brands' },
+      { id: 9, title: 'Shop', link: '/shopping' },
+      { id: 10, title: 'Instagram', link: '/instagram' }
+    ];
 
   return (
     <Container

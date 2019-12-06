@@ -4,23 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright} from '@fortawesome/free-regular-svg-icons'
 import CountrySelector from '../FooterSection/CountrySelector'
 
-function Footer () {
+function Footer ({shoppingInfo, myPages, customerService, countryInfo}) {
 
-  // const footerInfo = [
-  //   {
-  //     id: 1, category: "Shopping", items: [{ name: "Vinterjackor"}, { name: "Pufferjackor"}, { name: "Kappa"}, {name: "Trenchcoat"}]
-  //   }, {
-  //     id: 2, category: "Mina sidor", items: [{ name: "Mina ordrar"}, { name: "Mitt konto"}]   
-  //   },
-  //   {
-  //     id: 3, category: "Kundtjänst", items: [{ name: "Returpolicy" }, { name: "Integritetspolicy" }]
-  //   }
-  // ];
 
-  const countryList = [
-    { id: 1, title: 'Land', value1: 'Sverige', value2: 'England' },
-    { id: 2, title: 'Språk', value1: 'Svenska', value2: 'English' },
-  ];
+
 
 
   return (
@@ -35,90 +22,57 @@ function Footer () {
           <Row>
             <Col xs={12} md={4}>
               <h6 className="text-left">Shopping</h6>
-              <p className="text-left">
-                <a
-                  href="/jackets"
-                  style={{ color: 'black' }}
-                  className="text-decoration-none"
-                >
-                  Vinterjackor
-                </a>
-              </p>
-              <p className="text-left">
-                <a
-                  href="jackets"
-                  style={{ color: 'black' }}
-                  className="text-decoration-none"
-                >
-                  Pufferjackor
-                </a>
-              </p>
-              <p className="text-left">
-                <a
-                  href="jackets"
-                  style={{ color: 'black' }}
-                  className="text-decoration-none"
-                >
-                  Kappa
-                </a>
-              </p>
-              <p className="text-left">
-                <a
-                  href="jackets"
-                  style={{ color: 'black' }}
-                  className="text-decoration-none"
-                >
-                  Trenchcoats
-                </a>
-              </p>
+              {shoppingInfo.map(item=> {
+                return(
+                      <p className="text-left">
+                        <a
+                          href={item.href}
+                          style={{ color: 'black' }}
+                          className="text-decoration-none"
+                        >
+                          {item.product}
+                        </a>
+                      </p>
+                      );
+              })}
             </Col>
             <Col xs={12} md={4}>
               <h6 className="text-left">Mina Sidor</h6>
-              <p className="text-left">
-                <a
-                  href="mypages"
-                  style={{ color: 'black' }}
-                  className="text-decoration-none"
-                >
-                  Mina ordrar
-                </a>
-              </p>
-              <p className="text-left">
-                <a
-                  href="/mypages"
-                  style={{ color: 'black' }}
-                  className="text-decoration-none"
-                >
-                  Mitt konto
-                </a>
-              </p>
+              {myPages.map(item=> {
+                return (
+                  <p className="text-left">
+                    <a
+                      href={item.href}
+                      style={{ color: 'black' }}
+                      className="text-decoration-none"
+                    >
+                      {item.text}
+                    </a>
+                  </p>
+                );
+              })}
             </Col>
             <Col xs={12} md={4}>
               <h6 className="text-left">Kundtjänst</h6>
-              <p className="text-left">
-                <a
-                  href="/customerservice"
-                  style={{ color: 'black' }}
-                  className="text-decoration-none"
-                >
-                  Returpolicy
-                </a>
-              </p>
-              <p className="text-left">
-                <a
-                  href="/customerservice"
-                  style={{ color: 'black' }}
-                  className="text-decoration-none"
-                >
-                  Integritetspolicy
-                </a>
-              </p>
+              {customerService.map(item => {
+                return (
+                  <p className="text-left">
+                    <a
+                      href={item.href}
+                      style={{ color: 'black' }}
+                      className="text-decoration-none"
+                    >
+                    {item.info}
+                    </a>
+                  </p>
+                );
+              })}
             </Col>
           </Row>
         </Col>
           <Col xs={12} md={3}></Col>
           <Col xs={12} md={3}>
-          <CountrySelector countryList={countryList}/>
+          <CountrySelector country={countryInfo}/>
         </Col>
       </Row>
       <Row>

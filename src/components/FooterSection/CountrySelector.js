@@ -2,12 +2,12 @@ import React from 'react'
 import {Container, Row, Dropdown} from 'react-bootstrap'
 
 
-function CountrySelector ({countryList}){
+function CountrySelector ({country}){
 
   return (
     <Container>
       <h6 className="text-left">Välj land och språk</h6>
-      {countryList.map(item =>{
+      {country.map(item =>{
         return(
           <Row key={item.id}>
             <p className="text-left mr-2">{item.title}</p>
