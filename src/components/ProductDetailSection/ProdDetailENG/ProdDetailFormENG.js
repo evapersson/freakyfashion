@@ -3,7 +3,7 @@ import { Button, Row, Col } from 'react-bootstrap';
 import 'react-notifications/lib/notifications.css';
 import { NotificationManager } from 'react-notifications';
 
-const ProductDetailFormEng = ({ colorPicker, sizePicker }) => {
+const ProductDetailFormEng = ({ colorPicker, sizePicker, quantityPicker }) => {
   const [color, setColor] = useState('');
   const [size, setSize] = useState('');
   const [quantity, setQuantity] = useState('1');
@@ -12,11 +12,25 @@ const ProductDetailFormEng = ({ colorPicker, sizePicker }) => {
   //   resetForm();
   // }, []);
 
-  // const resetForm = () => {
-  //   setColor('');
-  //   setSize('');
-  //   setQuantity('1');
-  // };
+  const resetForm = () => {
+    setColor('');
+    setSize('');
+    setQuantity('1');
+  };
+  function saveProduct () {
+    NotificationManager.success(
+      `The following is saved to your basket: ${quantity} qa, size: ${size} color: ${color}`
+    )
+    // resetForm();
+  };
+
+  function buyProduct () {
+    NotificationManager.success(
+      `You have bought: ${quantity} qa, size: ${size} color: ${color}`
+    )
+  };
+
+  
 
   return (
     <>
@@ -57,44 +71,33 @@ const ProductDetailFormEng = ({ colorPicker, sizePicker }) => {
             <h6>Quantity</h6>
             <select
               type="number"
+              value={quantity}
               onChange={event => setQuantity(event.target.value)}
             >
-              <option value="1" name="quantity">
-                1
-              </option>
-              <option value="2" name="quantity">
-                2
-              </option>
-              <option value="3" name="quantity">
-                3
-              </option>
-              <option value="4" name="quantity">
-                4
-              </option>
+              {quantityPicker.map (item => {
+                return(
+                  <option key={item.id} value={item.quan} name={item.name}>
+                    {item.quan}
+                  </option>
+                )
+              })}
             </select>
           </Col>
         </Row>
         <div>
           <Button
-            className="mr-3 pl-3 pr-3 mt-2"
+            className="mr-3 pl-3 pr-3 mt-4"
             variant="outline-secondary"
-            onClick={() =>
-              NotificationManager.success(
-                `The following is saved to your basket: ${quantity} qa, size: ${size} color: ${color}`
-              )
-            }
+            onClick={saveProduct}
           >
             Save
           </Button>
 
           <Button
-            className="mr-3 pl-3 pr-3 mt-2"
+          type="submit"
+            className="mr-3 pl-3 pr-3 mt-4"
             variant="outline-secondary"
-            onClick={() =>
-              NotificationManager.success(
-                `You have bought: ${quantity} qa, size: ${size} color: ${color}`
-              )
-            }
+            onClick={buyProduct}
           >
             Buy
           </Button>

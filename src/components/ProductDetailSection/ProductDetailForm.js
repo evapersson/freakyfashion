@@ -3,21 +3,35 @@ import {Button, Row, Col} from 'react-bootstrap'
 import 'react-notifications/lib/notifications.css';
 import { NotificationManager } from 'react-notifications';
 
-const ProductDetailForm = ({colorPicker, sizePicker}) => {
+const ProductDetailForm = ({colorPicker, sizePicker, quantityPicker}) => {
 
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
-  const [quantity, setQuantity] =useState("1");
+  const [quantity, setQuantity] =useState("");
 
-  useEffect(()=> {
-    resetForm();
-  },[])
+  // useEffect(() => {
+  //   resetForm();
+  // }, []);
 
   const resetForm = () => {
     setColor("");
     setSize("");
-    setQuantity("1")
+    setQuantity("");
+  };
+  function saveProduct() {
+    NotificationManager.success(
+      `Du har sparat följande i din varukorg: ${quantity} st, storlek: ${size} färg: ${color}`
+    )
+    resetForm();
   }
+
+  function buyProduct() {
+    NotificationManager.success(
+      `Du har köpt följande: ${quantity} st, storlek: ${size} färg: ${color}`
+    )
+    resetForm();
+  }
+
   
   return (
     <>
@@ -65,20 +79,16 @@ const ProductDetailForm = ({colorPicker, sizePicker}) => {
             <select
               className="justify-content-start"
               type="number"
+              value={quantity}
               onChange={event => setQuantity(event.target.value)}
             >
-              <option value="1" name="quantity">
-                1
-              </option>
-              <option value="2" name="quantity">
-                2
-              </option>
-              <option value="3" name="quantity">
-                3
-              </option>
-              <option value="4" name="quantity">
-                4
-              </option>
+              {quantityPicker.map(item => {
+                return (
+                  <option key={item.id} value={item.quan} name={item.name}>
+                    {item.quan}
+                  </option>
+                )
+              })}
             </select>
           </Col>
         </Row>
@@ -87,11 +97,7 @@ const ProductDetailForm = ({colorPicker, sizePicker}) => {
           <Button
             className="mr-3 pl-3 pr-3 mt-4"
             variant="outline-secondary"
-            onClick={() =>
-              NotificationManager.success(
-                `Du har sparat följande i din varukorg: ${quantity} st, storlek: ${size} färg: ${color}`
-              )
-            }
+            onClick={saveProduct}
           >
             Spara
           </Button>
@@ -99,11 +105,7 @@ const ProductDetailForm = ({colorPicker, sizePicker}) => {
           <Button
             className="mr-3 pl-3 pr-3 mt-4"
             variant="outline-secondary"
-            onClick={() =>
-              NotificationManager.success(
-                `Du har lagt följande i din varukorg: ${quantity} st, storlek: ${size} färg: ${color}`
-              )
-            }
+            onClick={buyProduct}
           >
             Köp
           </Button>

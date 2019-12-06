@@ -24,7 +24,12 @@ const ProductDetail = () => {
     { id: 2, name: "size", size: "S" },
     { id: 3, name: "size", size: "M" },
     { id: 4, name: "size", size: "L" },
-
+  ]
+  const formQuantity = [
+    {id: 1, quan: 1, name: "quantity"},
+    { id: 2, quan: 2, name: "quantity" },
+    { id: 3, quan: 3, name: "quantity" },
+    { id: 4, quan: 4, name: "quantity" }
 
   ]
 
@@ -58,6 +63,7 @@ const ProductDetail = () => {
                 <ProductDetailForm
                   colorPicker={formColor}
                   sizePicker={formSize}
+                  quantityPicker={formQuantity}
                 />
               </Row>
             </Col>
@@ -81,6 +87,7 @@ const ProductDetail = () => {
                 <ProductDetailFormEng
                   colorPicker={formColor}
                   sizePicker={formSize}
+                  quantityPicker={formQuantity}
                 />
               </Row>
             </Col>
