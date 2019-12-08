@@ -23,7 +23,7 @@ const MainContentSmall = ({mainContentList}) => {
             <Card.Body>
               <Card.Title>{item.name}</Card.Title>
               <Card.Text>{item.shortDescription}</Card.Text>
-              <h3>{item.price} kr</h3>
+              <h5>{item.price} kr</h5>
             </Card.Body>
           </Link>
         </Card>

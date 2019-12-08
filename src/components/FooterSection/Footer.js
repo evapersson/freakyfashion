@@ -6,10 +6,6 @@ import CountrySelector from '../FooterSection/CountrySelector'
 
 function Footer ({shoppingInfo, myPages, customerService, countryInfo}) {
 
-
-
-
-
   return (
     <Container
       fluid
@@ -24,7 +20,7 @@ function Footer ({shoppingInfo, myPages, customerService, countryInfo}) {
               <h6 className="text-left">Shopping</h6>
               {shoppingInfo.map(item=> {
                 return(
-                      <p className="text-left">
+                      <p key={item.id} className="text-left">
                         <a
                           href={item.href}
                           style={{ color: 'black' }}
@@ -40,7 +36,7 @@ function Footer ({shoppingInfo, myPages, customerService, countryInfo}) {
               <h6 className="text-left">Mina Sidor</h6>
               {myPages.map(item=> {
                 return (
-                  <p className="text-left">
+                  <p key={item.id} className="text-left">
                     <a
                       href={item.href}
                       style={{ color: 'black' }}
@@ -56,7 +52,7 @@ function Footer ({shoppingInfo, myPages, customerService, countryInfo}) {
               <h6 className="text-left">Kundtjänst</h6>
               {customerService.map(item => {
                 return (
-                  <p className="text-left">
+                  <p key={item.id} className="text-left">
                     <a
                       href={item.href}
                       style={{ color: 'black' }}

@@ -1,5 +1,4 @@
 import React from 'react'
-import hero from '../../Images/hero.jpg';
 import {Row, Col, Image, Button} from 'react-bootstrap'
 
 

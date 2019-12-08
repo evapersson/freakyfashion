@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {Button, Row, Col} from 'react-bootstrap'
 import 'react-notifications/lib/notifications.css';
 import { NotificationManager } from 'react-notifications';
@@ -9,23 +9,25 @@ const ProductDetailForm = ({colorPicker, sizePicker, quantityPicker}) => {
   const [size, setSize] = useState("");
   const [quantity, setQuantity] =useState("");
 
-  // useEffect(() => {
-  //   resetForm();
-  // }, []);
+  // const handleInput = (event) => {
+  //   const {color, value} = event.target
+  //   setColor({...color, [color]: value})
+  // }
 
   const resetForm = () => {
     setColor("");
-    setSize("");
-    setQuantity("");
+    setSize("S");
+    setQuantity("1");
   };
-  function saveProduct() {
+
+ const saveProduct = () => {
     NotificationManager.success(
       `Du har sparat följande i din varukorg: ${quantity} st, storlek: ${size} färg: ${color}`
     )
     resetForm();
   }
 
-  function buyProduct() {
+const buyProduct= () => {
     NotificationManager.success(
       `Du har köpt följande: ${quantity} st, storlek: ${size} färg: ${color}`
     )
@@ -39,7 +41,8 @@ const ProductDetailForm = ({colorPicker, sizePicker, quantityPicker}) => {
         <h6 className="text-left">Välj färg</h6>
         {colorPicker.map(item => {
           return (
-            <>
+     
+              <label key={item.id} className="mr-1">
               <input
                 key={item.id}
                 type="radio"
@@ -47,9 +50,10 @@ const ProductDetailForm = ({colorPicker, sizePicker, quantityPicker}) => {
                 name={item.name}
                 className="ml-2"
                 onChange={event => setColor(event.target.value)}
+                // onChange={handleInput}
               />
-              <label className="mr-1">{item.color}</label>
-            </>
+              {item.color}</label>
+        
           );
         })}
         <Row>
@@ -96,7 +100,7 @@ const ProductDetailForm = ({colorPicker, sizePicker, quantityPicker}) => {
         <div>
           <Button
             className="mr-3 pl-3 pr-3 mt-4"
-            variant="outline-secondary"
+            variant="outline-primary"
             onClick={saveProduct}
           >
             Spara
@@ -104,7 +108,7 @@ const ProductDetailForm = ({colorPicker, sizePicker, quantityPicker}) => {
 
           <Button
             className="mr-3 pl-3 pr-3 mt-4"
-            variant="outline-secondary"
+            variant="outline-success"
             onClick={buyProduct}
           >
             Köp

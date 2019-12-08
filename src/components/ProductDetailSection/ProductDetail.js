@@ -1,8 +1,5 @@
 import React, {useState} from 'react'
 import {Row, Col, Image} from 'react-bootstrap'
-// import SizePicker from '../ProductDetailSection/SizePicker'
-// import ColorPicker from '../ProductDetailSection/ColorPicker'
-// import ButtonComp from '../ProductDetailSection/ButtonComp'
 import ProductDetailForm from './ProductDetailForm'
 import ProductDetailFormEng from './ProdDetailENG/ProdDetailFormENG'
 
@@ -39,7 +36,7 @@ const ProductDetail = () => {
     <Row className="align-items-start">
       <Col xs={12} md={6}>
         <Image
-          src="https://via.placeholder.com/450x600"
+          src="https://via.placeholder.com/450x550"
           alt="image on a product"
         ></Image>
       </Col>
@@ -50,7 +47,6 @@ const ProductDetail = () => {
           <div>
             <h3 className="text-left">{detailDataSve.title}</h3>
             <small>
-              {' '}
               <p className="text-left">{detailDataSve.articleNumber}</p>
             </small>
             <article className="mt-3 text-left">
@@ -67,21 +63,17 @@ const ProductDetail = () => {
                 />
               </Row>
             </Col>
-            {/* <Col xs={12} md={6}>
-
-        </Col> */}
           </div>
         ) : (
           <div>
             <h3 className="text-left">{detailDataEng.title}</h3>
             <small>
-              {' '}
               <p className="text-left">{detailDataEng.articleNumber}</p>
             </small>
             <article className="mt-3 text-left">
               <p>{detailDataEng.description}</p>
             </article>
-            <h5 className="mt-3 text-left">{detailDataEng.price}</h5>
+            <h6 className="mt-3 text-left">{detailDataEng.price}</h6>
             <Col xs={12} md={6}>
               <Row className="align-item-start mt-3">
                 <ProductDetailFormEng

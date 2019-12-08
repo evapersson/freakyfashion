@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { Button, Row, Col } from 'react-bootstrap';
 import 'react-notifications/lib/notifications.css';
 import { NotificationManager } from 'react-notifications';
@@ -14,23 +14,22 @@ const ProductDetailFormEng = ({ colorPicker, sizePicker, quantityPicker }) => {
 
   const resetForm = () => {
     setColor('');
-    setSize('');
+    setSize('S');
     setQuantity('1');
   };
   function saveProduct () {
     NotificationManager.success(
       `The following is saved to your basket: ${quantity} qa, size: ${size} color: ${color}`
     )
-    // resetForm();
+    resetForm();
   };
 
   function buyProduct () {
     NotificationManager.success(
       `You have bought: ${quantity} qa, size: ${size} color: ${color}`
     )
+    resetForm();
   };
-
-  
 
   return (
     <>
@@ -38,17 +37,15 @@ const ProductDetailFormEng = ({ colorPicker, sizePicker, quantityPicker }) => {
         <h6 className="text-left">Choose color</h6>
         {colorPicker.map(item => {
           return (
-            <>
+              <label key={item.id} className="mr-1">
               <input
-                key={item.id}
                 type="radio"
                 value={item.colorEng}
                 name={item.name}
                 className="ml-2"
                 onChange={event => setColor(event.target.value)}
               />
-              <label className="mr-1">{item.colorEng}</label>
-            </>
+              {item.colorEng}</label>
           );
         })}
         <Row>
@@ -87,7 +84,7 @@ const ProductDetailFormEng = ({ colorPicker, sizePicker, quantityPicker }) => {
         <div>
           <Button
             className="mr-3 pl-3 pr-3 mt-4"
-            variant="outline-secondary"
+            variant="outline-primary"
             onClick={saveProduct}
           >
             Save
@@ -96,7 +93,7 @@ const ProductDetailFormEng = ({ colorPicker, sizePicker, quantityPicker }) => {
           <Button
           type="submit"
             className="mr-3 pl-3 pr-3 mt-4"
-            variant="outline-secondary"
+            variant="outline-success"
             onClick={buyProduct}
           >
             Buy
