@@ -41,7 +41,6 @@ const buyProduct= () => {
         <h6 className="text-left">Välj färg</h6>
         {colorPicker.map(item => {
           return (
-     
               <label key={item.id} className="mr-1">
               <input
                 key={item.id}
